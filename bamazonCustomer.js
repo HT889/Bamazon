@@ -14,7 +14,7 @@ connectDB();
 function connectDB() {
   connection.connect(async function (err) {
     if (err) throw err;
-    console.log("connected as id" + connection.threadId + "\n");
+    // console.log("connected as id" + connection.threadId + "\n");
 
     await readProducts();
 
@@ -79,7 +79,7 @@ Your total was $${res[0].price * whatToBuy.quantity}.
 
 Please make a new selection. Thank you for choosing Bamazon.
 `);
-        connection.end();
+        connection.end()
       }
     })
     // console.log("checkproductsquantity function query.sql", query.sql);
